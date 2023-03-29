@@ -6,16 +6,14 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal|center_vertical"
     tools:context=".splashActivity"
-    android:background="#1C508F"
-    >
+    android:background="@android:color/system_accent1_100">
 
     <ImageView
         android:id="@+id/idLogo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
-        android:src="@drawable/logo"
-
+        android:src="@drawable/logo" 
         />
 
     <ProgressBar
