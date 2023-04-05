@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ContrateAgora</string>
+    <string name="novidades">Novidades</string>
+    <string name="mapa">Mapa</string>
 </resources>
