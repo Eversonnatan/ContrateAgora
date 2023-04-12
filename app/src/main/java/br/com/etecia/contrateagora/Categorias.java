@@ -1,20 +1,20 @@
 package br.com.etecia.contrateagora;
 
 public class Categorias {
-    private String titulo;
+    private String botao;
     private int imagem;
 
-    public Categorias (String titulo, int imagem) {
-        this.titulo = titulo;
+    public Categorias (String botao, int imagem) {
+        this.botao = botao;
         this.imagem = imagem;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getBotao() {
+        return botao;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setBotao(String botao) {
+        this.botao = botao;
     }
 
     public int getImagem() {

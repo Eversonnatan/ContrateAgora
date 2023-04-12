@@ -10,7 +10,7 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/idimagem"
+            android:id="@+id/idImagemCategorias"
             android:layout_width="match_parent"
             android:layout_height="130dp"
             android:layout_marginVertical="@dimen/cardview_compat_inset_shadow"
@@ -18,7 +18,7 @@
             android:src="@drawable/personalfight" />
 
         <Button
-            android:id="@+id/idBotao"
+            android:id="@+id/idBotaoCategorias"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10sp"

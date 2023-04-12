@@ -1,11 +1,15 @@
 package br.com.etecia.contrateagora;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -14,9 +18,9 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context mContexto;
     private List<Categorias> lstCategorias;
 
-    public MyAdapter(Context mContexto, List<Categorias> lstFilmes) {
+    public MyAdapter(Context mContexto, List<Categorias> lstCategorias) {
         this.mContexto = mContexto;
-        this.lstCategorias = lstFilmes;
+        this.lstCategorias = lstCategorias;
     }
 
 
@@ -33,20 +37,20 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        holder.idImagem.se
-        holder.idBotaoCategoria.setImageResource(lstCategorias.get(position).getImagem());
+        holder.idBotao.set;
+        holder.idImagemCategorias.setImageResource(lstCategorias.get(position).getImagem());
+
 
         holder.idCardCategorias.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(mContexto, ApresentaFilmeActivity.class);
+                Intent intent = new Intent(mContexto, MenuActivity.class);
 
-                intent.putExtra("Titulo", lstFilmes.get(position).getTitulo());
-                intent.putExtra("Descricao", lstFilmes.get(position).getDescricao());
-                intent.putExtra("Categoria", lstFilmes.get(position).getCategoria());
-                intent.putExtra("ImagemFilme", lstFilmes.get(position).getImagem());
+
+                intent.putExtra("ImagemCategoria", lstCategorias.get(position).getImagem());
+                intent.putExtra("botao", lstCategorias.get(position).getBotao());
 
                 mContexto.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 
@@ -59,4 +63,20 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public int getItemCount() {
         return 0;
     }
+
+
+        //criar a classe ViewHolder
+        public class ViewHolder extends RecyclerView.ViewHolder {
+            ImageView idImagemCategorias;
+            Button idBotaoCategorias;
+            CardView idCardCategorias;
+
+            public ViewHolder(@NonNull View itemView) {
+                super(itemView);
+                idImagemCategorias = itemView.findViewById(R.id.idImagemCategorias);
+                idBotaoCategorias = itemView.findViewById(R.id.idBotaoCategorias);
+                idCardCategorias = itemView.findViewById(R.id.idCardCategorias);
+            }
+        }
+
 }
