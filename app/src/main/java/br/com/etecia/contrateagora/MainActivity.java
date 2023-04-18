@@ -1,8 +1,11 @@
 package br.com.etecia.contrateagora;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -10,8 +13,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //criando a classe adaptadora e passando os parâmetros
-        MyAdapter adapter = new MyAdapter(getApplicationContext(), lstCategorias);
     }
 }

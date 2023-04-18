@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private Context mContexto;
     private List<Categorias> lstCategorias;
 
@@ -26,7 +26,7 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
 
         LayoutInflater inflater = LayoutInflater.from(mContexto);
@@ -36,11 +36,14 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        holder.idBotao.set;
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.idImagemCategorias.setImageResource(lstCategorias.get(position).getImagem());
+        holder.idBotaoCategorias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-
+            }
+        });
         holder.idCardCategorias.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -49,8 +52,8 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 Intent intent = new Intent(mContexto, MenuActivity.class);
 
 
-                intent.putExtra("ImagemCategoria", lstCategorias.get(position).getImagem());
-                intent.putExtra("botao", lstCategorias.get(position).getBotao());
+                intent.putExtra("ImagemCategoria", lstCategorias.get(holder.getAdapterPosition()).getImagem());
+                intent.putExtra("botao", lstCategorias.get(holder.getAdapterPosition()).getBotao());
 
                 mContexto.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 
@@ -61,7 +64,7 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return lstCategorias.size();
     }
 
 
