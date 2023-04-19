@@ -23,9 +23,6 @@ public class MenuActivity extends AppCompatActivity {
         //Apresentando o xml
         idRecyclerView = findViewById(R.id.idListaCategorias);
 
-        //criando a classe adaptadora e passando os parâmetros
-        MyAdapter adapter = new MyAdapter(getApplicationContext(), listaCategorias);
-
         //Criando a base de dados
 
         listaCategorias = new ArrayList<>();
@@ -45,6 +42,9 @@ public class MenuActivity extends AppCompatActivity {
                         "Saúde",
                         R.drawable.saude
                 ));
+
+        //criando a classe adaptadora e passando os parâmetros
+        MyAdapter adapter = new MyAdapter(getApplicationContext(), listaCategorias);
 
         //Tipo de layout que a lista irá seguir
         idRecyclerView.setLayoutManager(new
