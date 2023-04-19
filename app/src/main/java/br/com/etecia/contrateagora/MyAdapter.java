@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -38,12 +39,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.idImagemCategorias.setImageResource(lstCategorias.get(position).getImagem());
-        holder.idBotaoCategorias.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+        holder.idBotaoCategorias.setText(lstCategorias.get(position).getBotao());
         holder.idCardCategorias.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -71,7 +67,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         //criar a classe ViewHolder
         public class ViewHolder extends RecyclerView.ViewHolder {
             ImageView idImagemCategorias;
-            Button idBotaoCategorias;
+            TextView idBotaoCategorias;
             CardView idCardCategorias;
 
             public ViewHolder(@NonNull View itemView) {

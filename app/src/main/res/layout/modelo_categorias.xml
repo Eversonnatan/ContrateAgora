@@ -13,15 +13,20 @@
             android:id="@+id/idImagemCategorias"
             android:layout_width="match_parent"
             android:layout_height="130dp"
-            android:layout_marginVertical="@dimen/cardview_compat_inset_shadow"
-            android:scaleType="fitEnd"
+            android:layout_margin="4sp"
+            android:scaleType="fitCenter"
             android:src="@drawable/personalfight" />
 
-        <Button
+        <TextView
             android:id="@+id/idBotaoCategorias"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10sp"
+            android:layout_margin="5sp"
+            android:padding="5sp"
+            android:background="#7502B8"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textAlignment="center"
             android:text="Fitness"
 
             />

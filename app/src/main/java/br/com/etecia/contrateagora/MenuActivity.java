@@ -30,6 +30,22 @@ public class MenuActivity extends AppCompatActivity {
 
         listaCategorias = new ArrayList<>();
 
+        listaCategorias.add(
+                new Categorias(
+                        "Fitness",
+                        R.drawable.personalfight
+                ));
+        listaCategorias.add(
+                new Categorias(
+                        "Obra Civil",
+                        R.drawable.obracivil
+                ));
+        listaCategorias.add(
+                new Categorias(
+                        "Saúde",
+                        R.drawable.saude
+                ));
+
         //Tipo de layout que a lista irá seguir
         idRecyclerView.setLayoutManager(new
                 GridLayoutManager(
