@@ -7,6 +7,8 @@
     android:orientation="vertical"
     tools:context=".MenuActivity">
 
+    <!--  Lista categorias-->
+
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/idToolBar"
         style="@style/Widget.MaterialComponents.Toolbar.Primary"
@@ -19,16 +21,9 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
 
-    </com.google.android.material.appbar.AppBarLayout>
+        />
 
-
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/bottom_navigation"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:menu="@menu/bottom_navigation_menu" />-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -43,10 +38,10 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/idListaCategorias"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 
 
 </LinearLayout>
