@@ -7,6 +7,7 @@ public class Categorias {
     public Categorias (String botao, int imagem) {
         this.botao = botao;
         this.imagem = imagem;
+        this.titulo = titulo;
     }
 
     public String getBotao() {

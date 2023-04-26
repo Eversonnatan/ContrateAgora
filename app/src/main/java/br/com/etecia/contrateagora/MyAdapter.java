@@ -46,7 +46,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
                 Intent intent = new Intent(mContexto, MenuActivity.class);
 
-
+                intent.putExtra("Titulo",lstCategorias.get(position).getTitulo());
+                intent.putExtra("Descricao",lstCategorias.get(position)getDescricao);
                 intent.putExtra("ImagemCategoria", lstCategorias.get(holder.getAdapterPosition()).getImagem());
                 intent.putExtra("botao", lstCategorias.get(holder.getAdapterPosition()).getBotao());
 
@@ -71,9 +72,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
             public ViewHolder(@NonNull View itemView) {
                 super(itemView);
-                idImagemCategorias = itemView.findViewById(R.id.idImagemCategorias);
-                idBotaoCategorias = itemView.findViewById(R.id.idBotaoCategorias);
-                idCardCategorias = itemView.findViewById(R.id.idCardCategorias);
+                idImagemCategorias = itemView.findViewById(R.id.mImagemCategoria);
+                idBotaoCategorias = itemView.findViewById(R.id.btnVoltar);
+                idCardCategorias = itemView.findViewById(R.id.mTituloCategoria);
             }
         }
 
